@@ -1,0 +1,14 @@
+#TURTLES AHHHHHHHH
+#Aiden Krahn
+#Okay I'm Done Now
+
+import turtle
+
+def doit(leng):
+    if leng == 1:
+        return 1
+    
+    else:
+        return (leng * doit(leng-1))
+    
+print(doit(9))
