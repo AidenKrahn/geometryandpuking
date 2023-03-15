@@ -4,11 +4,20 @@
 
 import turtle
 
-def doit(leng):
-    if leng == 1:
-        return 1
-    
+def doit(leng, squ):
+    if squ == 0:
+        td.fd(leng)
+        td.right(90)
+        td.fd(leng)
+        td.right(90)
+        td.fd(leng)
+        td.right(90)
+        td.fd(leng)
+        td.penup()
+        td.left(45)
+        td.forward(leng/4)
+        td.right(135)
+        td.pendown()
+        
     else:
-        return (leng * doit(leng-1))
-    
-print(doit(9))
+        doit(leng*0.825, squ-1)
