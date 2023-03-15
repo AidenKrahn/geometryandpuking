@@ -21,3 +21,13 @@ def doit(leng, squ):
         
     else:
         doit(leng*0.825, squ-1)
+        doit(leng, 0)
+    
+td = turtle.Turtle()
+td.penup()
+td.bk(200)
+td.right(90)
+td.forward(200)
+td.pendown()
+td.speed(0)
+doit(500, 33)
