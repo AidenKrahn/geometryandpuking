@@ -2,11 +2,11 @@
 #Aiden Krahn
 #Okay I'm Done Now
 
-import turtle
+import turtle#imports turtle module
 
 def doit(leng, squ):
-    if squ == 0:
-        td.fd(leng)
+    if squ == 0:#to start drawing smaller square
+        td.fd(leng)#9-15 draws square
         td.right(90)
         td.fd(leng)
         td.right(90)
@@ -14,20 +14,21 @@ def doit(leng, squ):
         td.right(90)
         td.fd(leng)
         td.penup()
-        td.left(45)
+        td.left(45)#17-20 repositions pen outside square to redo pattern
         td.forward(leng/4)
         td.right(135)
         td.pendown()
         
     else:
-        doit(leng*0.825, squ-1)
-        doit(leng, 0)
+        doit(leng*0.825, squ-1)#reduces pattern, gets closer to goal
+        doit(leng, 0)#actually draws square
     
 td = turtle.Turtle()
-td.penup()
+td.color("blue")
+td.penup()#26-33 is just intial setup to get it to the right spot
 td.bk(200)
 td.right(90)
 td.forward(200)
 td.pendown()
 td.speed(0)
-doit(500, 33)
+doit(500, 10)#starts
